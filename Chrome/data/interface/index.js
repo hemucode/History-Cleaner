@@ -99,9 +99,8 @@ window.onload = function(){
     document.querySelector(".ctrl__button--increment").addEventListener("click", function()  {
       time = document.querySelector('#time').value;
       if(time < 1000){
-        document.querySelector('#time').value++;
+        thistimes = document.querySelector('#time').value++;
         document.querySelector("#show").innerText++;
-        thistimes = time++;
         chrome.runtime.sendMessage({
           clearTime: thistimes
         }, function () {
