@@ -199,11 +199,14 @@ try{
   }
   chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     if (request.clearTime !== null && request.clearTime !== undefined) {
-      console.log('bg.js message received :' + request.clearTime);
+      console.log('message received :' + request.clearTime);
       clearTime = parseInt(request.clearTime);
-      if (clearTime < 0)
+      if (clearTime == 0)
+        clearInterval(timer);
+        timer = null;
+        console.log("timer cleared");
+        console.log('time :' + clearTime);
         return;
-      console.log('bg.js time :' + clearTime);
       if (timer !== null) {
         clearInterval(timer);
         timer = null;

@@ -99,9 +99,9 @@ window.onload = function(){
     document.querySelector(".ctrl__button--increment").addEventListener("click", function()  {
       time = document.querySelector('#time').value;
       if(time < 1000){
-        thistimes = document.querySelector('#time').value++;
-        document.querySelector('#time').value = document.querySelector('#time').value++;
-        document.querySelector("#show").innerText++;
+        thistimes = Number(time) + 1;
+        document.querySelector('#time').value = Number(time) + 1;
+        document.querySelector("#show").innerText = Number(time) + 1;
         chrome.runtime.sendMessage({
           clearTime: thistimes
         }, function () {
@@ -120,11 +120,30 @@ window.onload = function(){
             console.log('msg sent');
           });
       }
+      if (time < 1000) {
+          time = 1000
+          console.log(time);
+          chrome.runtime.sendMessage({
+            clearTime: time
+          }, function () {
+            console.log('msg sent');
+          });
+      }
+      if (0 < time) {
+          time = 0
+          console.log(time);
+          chrome.runtime.sendMessage({
+            clearTime: time
+          }, function () {
+            console.log('msg sent');
+          });
+      }
     });
 }
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.clearTime !== null && request.clearTime !== undefined) {
+    sendResponse(true);
     console.log('message received :' + request.clearTime);
     time = request.clearTime;
     document.querySelector("#time").value = time;
