@@ -84,7 +84,7 @@ window.onload = function(){
     });
     document.querySelector(".ctrl__button--decrement").addEventListener("click", function()  {
       time = document.querySelector('#time').value;
-      if(0 <= time){
+      if(0 < time){
         document.querySelector('#time').value = time - 1;
         document.querySelector("#show").innerText = time - 1;
         thistime = time - 1;
@@ -98,10 +98,10 @@ window.onload = function(){
     })
     document.querySelector(".ctrl__button--increment").addEventListener("click", function()  {
       time = document.querySelector('#time').value;
-      if(time <= 1000){
-        document.querySelector('#time').value =+ 1;
-        document.querySelector("#show").innerText =+ 1;
-        thistimes = time =+ 1;
+      if(time < 1000){
+        document.querySelector('#time').value++;
+        document.querySelector("#show").innerText++;
+        thistimes = time++;
         chrome.runtime.sendMessage({
           clearTime: thistimes
         }, function () {
@@ -112,7 +112,7 @@ window.onload = function(){
     })
     document.querySelector("#time").addEventListener("change", function()  {
       time = document.querySelector('#time').value;
-      if (time <= 1001 && 0 <= time) {
+      if (time < 1000 && 0 < time) {
           console.log(time);
           chrome.runtime.sendMessage({
             clearTime: time
