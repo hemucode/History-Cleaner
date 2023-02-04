@@ -201,12 +201,13 @@ try{
     if (request.clearTime !== null && request.clearTime !== undefined) {
       console.log('message received :' + request.clearTime);
       clearTime = parseInt(request.clearTime);
-      if (clearTime == 0)
+      if (clearTime == 0){
         clearInterval(timer);
         timer = null;
         console.log("timer cleared");
         console.log('time :' + clearTime);
         return;
+      }
       if (timer !== null) {
         clearInterval(timer);
         timer = null;

@@ -147,7 +147,12 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     console.log('message received :' + request.clearTime);
     time = request.clearTime;
     document.querySelector("#time").value = time;
-    document.querySelector("#show").innerText = time;
+    
+    if (time == 0) {
+      document.querySelector("#show").innerText = "Not Set";
+    }else{
+      document.querySelector("#show").innerText = time;
+    }
   }
 });
 
