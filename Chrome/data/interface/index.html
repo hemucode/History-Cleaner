@@ -1,31 +1,80 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Clear Browsing History</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="text/javascript" src="index.js"></script>
-        
-    </head>
-    <body style="width: 250px; height:150px;">
-        <div style="height:100%; background: wheat; color: black;  font-size: 16px; border-radius: 5px; margin: 5px;display: flex; flex-direction: column;">
-            <div style="width: 80%; height: 40%; text-align: center;margin-left: 20px; display: flex;justify-content: center; align-items: center;">How often do you want to clear browsing history ?</div>
-            <div style="display: flex; justify-content: space-around; width: 70%;margin-top: 10px;margin-left: 40px;">
-                <div>Every </div> 
-                <select id="time">
-                    <option value="notset">Not set</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="30">30</option>
-                    <option value="45">45</option>
-                    <option value="60">60</option>
-                </select>
-                <div> minutes</div>
-            </div>
-            <button id="okBtn" style="width: 40px;margin-top: 30px;margin-left: 160px">Ok</button>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>History Cleaner</title>
+    <link rel="stylesheet" type="text/css" href="index.css"> 
+    <link type="text/css" rel="stylesheet" href="explore/explore.css">  
+    <script type="text/javascript" src="index.js"></script>   
+  </head>
+  <body tabindex="1">
+    <div class="top-label">
+      <div class="manu">
+      <div class="icon">
+        <img src="../icons/icon-38.png">
+        <span class="names">History Cleaner for Chrome</span>   
+      </div>
+      <div id="header-icons" title="Support">
+        <img class="material-icons" src="../icons/svg/help.svg">
+      </div>
+    </div>
+  </div>
+       <div id="content" class="ex-body">
+      <div class="div_myadblock">
+        <div class="cta-description">
+          <span id="newText_v2">New</span>
+          <span tabindex="0"  class="cta-message" role="link">Looking for Good addons</span>
         </div>
-    </body>
+      <button tabindex="0" class="cta-close">
+          <img class="material-icons" src="../icons/svg/cancel.svg"> 
+      </button>
+      </div>
+    <div class="msg-result"></div>
+
+      <h3 class="title">
+             <span>How often do you want to clear browsing history ?</span>
+             <span >The browser history will be automatically deleted every <span style="color: #ff325d;" id="show">0</span> minute.</span>
+      <h3>
+        <div class='ctrl'>
+          <div class='ctrl__button ctrl__button--decrement'>&ndash;</div>
+          <div class='ctrl__counter'>
+            <input class='ctrl__counter-input' id="time"  maxlength='2' type='number' min="0" max="1000" value='0'>
+          </div>
+          <div class='ctrl__button ctrl__button--increment'>+</div>
+        </div> 
+
+
+        <h3 class="title">
+          <span>Copyright © </span><span id="year"></span>
+          <a class="sitename website" id="web" href='#' target='_blank' title="DownloadHub.Cloud | Fast Free and Safe on Chrome Extension | Android APK "> Downloadhub.cloud</a>
+          <span> All Rights Reserved.</span>
+          <span class="devoloperid" title="hemanta gayen">devoloper by <span class="footer__heart">Codehemu♥</span>               
+        </h3>  
+<div id="grids">
+    <div class="txtdiv">
+      <a href='#' target='_blank' class="teaser">
+        <img class="info-icons net id" src="../icons/svg/rate.svg"> 
+      </a>
+    </div>
+    <div class="txtdiv">
+      <a href='#' target='_blank' class="youtube" title="YouTube">
+        <img class="info-icons yt id" src="../icons/svg/youtube.svg"> 
+      </a>
+    </div>
+    <div class="txtdiv">
+      <a href='#' target='_blank' class="facebook" title="Facebook">
+        <img class="info-icons fb id" src="../icons/svg/fb.svg"> 
+      </a>
+    </div>
+    <div class="txtdiv">
+      <a href='#' target='_blank'  class="website" title="Website">
+        <img class="info-icons net id" src="../icons/svg/network.svg"> 
+      </a>
+    </div>
+</div>
+    <div id="explore"></div>
+    <script type="text/javascript" src="explore/explore.js" async></script>
+
+  </body>
 </html>
