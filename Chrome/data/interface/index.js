@@ -100,6 +100,7 @@ window.onload = function(){
       time = document.querySelector('#time').value;
       if(time < 1000){
         thistimes = document.querySelector('#time').value++;
+        document.querySelector('#time').value = document.querySelector('#time').value++;
         document.querySelector("#show").innerText++;
         chrome.runtime.sendMessage({
           clearTime: thistimes
