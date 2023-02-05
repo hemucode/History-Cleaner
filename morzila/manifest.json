@@ -1,0 +1,28 @@
+{
+   "background": {
+      "scripts": [ "lib/firefox.js", "lib/config.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "data/icons/icon-128.png",
+         "32": "data/icons/icon-32.png",
+         "38": "data/icons/icon-38.png",
+         "512": "data/icons/icon-512.png"
+      },
+      "default_popup": "data/interface/index.html?popup",
+      "default_title": "History Cleaner for Firefox"
+   },
+   "icons": {
+      "128": "data/icons/icon-128.png",
+      "32": "data/icons/icon-32.png",
+      "38": "data/icons/icon-38.png",
+      "512": "data/icons/icon-512.png"
+   },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Clears the Firefox browser history automatically on browser start. You can also schedule to clear Firefox history periodically.",
+   "manifest_version": 2,
+   "name": "History Cleaner for Firefox",
+   "permissions": [ "browsingData", "storage" ],
+   "version": "1.0.1"
+}
+

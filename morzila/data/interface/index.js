@@ -17,7 +17,7 @@ function credityear() {
 }
 
 function linkButton() {
-  document.querySelector('.teaser').href = `https://microsoftedge.microsoft.com/addons/detail/${chrome.runtime.id}`;
+  document.querySelector('.teaser').href = `https://addons.mozilla.org/firefox/addon/historycleanerforfirefox/`;
   document.querySelector('.youtube').href = `https://youtube.com/c/HemantaGayen`;
   document.querySelector('.facebook').href = `https://www.facebook.com/codehemu/`;
   document.querySelector('.web1site').href = `https://www.downloadhub.cloud/`;
