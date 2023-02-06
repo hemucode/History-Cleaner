@@ -18,11 +18,11 @@
       "38": "data/icons/icon-38.png",
       "512": "data/icons/icon-512.png"
    },
-   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "homepage_url": "https://www.downloadhub.cloud/2023/02/History.html",
    "description": "Clears the Firefox browser history automatically on browser start. You can also schedule to clear Firefox history periodically.",
    "manifest_version": 2,
    "name": "History Cleaner for Firefox",
    "permissions": [ "browsingData", "storage" ],
-   "version": "1.0.1"
+   "version": "1.0.2"
 }
 
