@@ -17,7 +17,7 @@ function credityear() {
 }
 
 function linkButton() {
-  document.querySelector('.teaser').href = `https://addons.opera.com/en/extensions/details/youtube-auto-2/`;
+  document.querySelector('.teaser').href = `https://addons.opera.com/en/extensions/details/history-cleaner-for-opera/`;
   document.querySelector('.youtube').href = `https://youtube.com/c/HemantaGayen`;
   document.querySelector('.facebook').href = `https://www.facebook.com/codehemu/`;
   document.querySelector('.web1site').href = `https://www.downloadhub.cloud/`;
